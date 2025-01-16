@@ -2,7 +2,7 @@
 
 main_program{
 
-    double  degree  = 45;
+    double  degree  = 90;
     double pi = 3.14159265359;
     double x = (degree * pi )/(180.0);
 
@@ -11,7 +11,7 @@ main_program{
     double i = 2;
     double x_pow = x;
 
-    repeat(100){
+    repeat(500){
         sin_x += x_pow / fact;
 
         x_pow *=  -1* x* x;
