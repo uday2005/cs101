@@ -8,8 +8,7 @@ main_program{
     cin >> days;
 
     int month = days / 30 ;
-    
-    
+     
     int total = 0;
 
     while (month > 0){
@@ -35,5 +34,35 @@ main_program{
      
     std::cout << date << "/" << (again_month+1) << "/" << years << std::endl;
 
+
+}
+
+int main(){
+    int month = 1;
+    int years;
+    int days;
+    int total_days = 0;
+    int days_in_month ;
+
+    while(True){
+        if (month == 2){
+            if ((years % 400 == 0 )  ||(years%4==0 && !(years%100==0))){ 
+                days_in_month = 29;
+            }
+            else{
+                days_in_month = 28;
+            }
+        }
+            else if((month % 2)==0){
+            days_in_month = 30;
+        }
+        else{
+            days_in_month = 31;
+        }
+
+        month += 1;
+
+
+}
 
 }
