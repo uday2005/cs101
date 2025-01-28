@@ -51,7 +51,7 @@ while (high >= 0)
         std::cout << "F";
     }
 
-high = high-1;
+high = high-1 ;
 
 }
 
