@@ -22,7 +22,7 @@ for (int i=0;i<count;i++){
     m = m/10;
     n = n/10;
 }
-cout << sum1 << " " << sum2 << " " << prod1 << " " << prod2 ;
+
 return ((sum1 == sum2 && prod1 == prod2 ) ? 1 : 0 ) ;
 
 }
