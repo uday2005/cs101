@@ -1,0 +1,39 @@
+#include <simplecpp>
+
+
+void Pascal_triangle(int num){
+	for(int i = 0;i<num;i++)
+	{
+		int value = 1;
+		std::cout << 1 << " ";
+	for(int j = 0;j<i;j++){
+		value = value *(i-j)/(j+1);
+		// value = value *((i-j)/(j+1)); // so this is wrong as i and j are integers and inside nrcket will
+		// be exececueted first which will cause the integer divison and by doing so it will 
+		// round off the float value to int which will cause inaccuracy.
+
+		std::cout << value << " ";
+	}
+	std::cout << std::endl;
+	}
+
+}
+main_program{
+    int n;
+    cin >>n;
+
+    for (int i=0;i< n;i++)
+
+    {
+	int sum = 0;
+	int value = 1;
+	for (int j = 0; j<= i; j++)
+	{
+	sum += value;
+	std::cout << sum << " ";
+	value = (value * (i-j))/ (j+1);
+	}
+	
+	std::cout << endl;
+    }
+}
