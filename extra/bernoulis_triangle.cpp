@@ -29,11 +29,34 @@ main_program{
 	int value = 1;
 	for (int j = 0; j<= i; j++)
 	{
-	sum += value;
+	sum += value; 
 	std::cout << sum << " ";
-	value = (value * (i-j))/ (j+1);
+	value  =  (value * (i-j))/ (j+1);
+
 	}
 	
 	std::cout << endl;
+    }
+}
+
+// Function to compute factorial
+long long fact(int n) {
+    long long res = 1;
+    for (int i = 2; i <= n; i++) res *= i;
+    return res;
+}
+
+// Function to compute nCr = n! / (r! * (n - r)!)
+long long nCr(int n, int r) {
+    return fact(n) / (fact(r) * fact(n - r));
+}
+
+// Function to print Pascal's Triangle
+void printPascal(int rows) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << nCr(i, j) << " ";  // Compute C(i, j)
+        }
+        cout << endl;
     }
 }

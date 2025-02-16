@@ -1,13 +1,13 @@
 #include <simplecpp>
 #include <cmath>
-// int digits(int num){
-//     int count = 0;
-//     for(;num >0;num /= 10){
-//         count ++;
-//     }
-//     return count;
-// }
 
+int digits(int num){
+    int count = 0;
+    for(;num >0;num /= 10){ 
+        count ++;
+    }
+    return count;
+}
 int digits(int num){
     return (num==0) ? 1 : floor(log10(num))+1;
     // if num is zero then the digits will be also 1 which we need to specify
@@ -20,6 +20,7 @@ int power1 (int n,int m){
     }
     return result;
 }
+
 int roateMe(int n , char m){
     int digit = digits(n);
     int power = power1(10,digit-1);

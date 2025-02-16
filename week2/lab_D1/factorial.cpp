@@ -20,3 +20,11 @@ main_program{
     }
     std::cout << factorial;
 }
+
+// one more way to do this is  by using recurrsion
+
+long long factorial (int num){
+	if (num==0 || num==1) return 1;// base case
+	return num * factorial(num-1);//Recursive call
+
+}

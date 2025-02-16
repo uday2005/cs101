@@ -25,6 +25,16 @@ for (int i=0;i<count;i++){
     prod1 = prod1 * (m%10);
 }
 
+// sum1 = sum1 + (m%10);
+// sum2 = sum2 + (n%10);
+// if(n%10 != 0) prod2 = prod2 * (n%10); // this case handles the number for which the digits are zero
+// else prod2 = prod2 * 1;
+// if(m%10 != 0)   prod1 = prod1 * (m%10);
+// else prod1 = prod1 * 1;
+
+// m = m/10;
+// n = n/10;
+
 return ((sum1 == sum2 && prod1 == prod2 ) ? 1 : 0 ) ;
 
 }

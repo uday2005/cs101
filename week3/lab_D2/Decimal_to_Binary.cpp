@@ -36,3 +36,46 @@ while (!(high < 0)){
 }
 
 }
+
+// Using bitwise operator for conversion
+
+void decimal_to_binary(int n){
+    for (int i=31;i>=0;i--){
+        cout << ((n>>i)&1);
+    }
+    cout << endl; 
+}
+
+void decimal_to_binary2(int m){
+    if (m==0) return ; // Base case sop if m is equals to zero.
+
+    decimal_to_binary2(m/2); // recursive call to afterward number
+    cout << m%2;
+
+
+
+}
+
+int binary_to_decimal (int m){
+    int sum = 0, power = 1;
+
+    while (m>0){
+        int digit = m %10;
+        sum += digit * power;
+        power *= 2;
+        m = m/10; 
+    }
+    return sum;
+}
+
+int binary_to_decimal2 (int m){
+    int sum = 0,power = 1;
+
+    while (m>0){
+        sum = sum + ( m & 1) * power;
+        power <<= 1;
+        m >>= 1;
+    }
+
+    return sum;
+}
